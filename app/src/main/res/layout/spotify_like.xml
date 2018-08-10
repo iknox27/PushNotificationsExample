@@ -19,7 +19,6 @@
         android:layout_width="0dp"
         android:layout_height="match_parent">
 
-
         <ImageView
             android:id="@+id/ic_media_previous"
             android:layout_alignLeft="@+id/ic_media_play"

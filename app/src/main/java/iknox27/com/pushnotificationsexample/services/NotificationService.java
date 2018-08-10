@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.widget.RemoteViews;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -63,17 +64,15 @@ public class NotificationService extends FirebaseMessagingService {
             notificationManager.createNotificationChannel(mChannel);
         }
 
-
+        RemoteViews contentView = new RemoteViews(getPackageName(), R.layout.spotify_like);
         NotificationCompat.Builder mBuilder;
         Bitmap bmn = getBitmapFromURL(typeOfNotification.get(1));
          mBuilder = new NotificationCompat.Builder(this, getString(R.string.default_notification_channel_id))
                     .setSmallIcon(R.drawable.ic_stat_name)
-                    .setColorized(true)
-                    .setColor(getResources().getColor(R.color.colorAccent))
-                    .setContentTitle(title)
-                    .setLargeIcon(bmn)
-                    .addAction(makeAction(typeOfNotification.get(0)))
-                    .setContentText(body);
+                 //.setColorized(true)
+                 .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                 .setCustomContentView(contentView)
+                 .setCustomBigContentView(contentView);
 
 
         Intent intent = new Intent(this, MainActivity.class);
@@ -84,7 +83,7 @@ public class NotificationService extends FirebaseMessagingService {
                 0,
                 PendingIntent.FLAG_UPDATE_CURRENT
         );
-        mBuilder.setContentIntent(resultPendingIntent);
+       // mBuilder.setContentIntent(resultPendingIntent);
 
         notificationManager.notify(notificationId, mBuilder.build());
     }
