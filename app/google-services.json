@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "186698242752",
+    "firebase_url": "https://comprascamacho-43eaf.firebaseio.com",
+    "project_id": "comprascamacho-43eaf",
+    "storage_bucket": "comprascamacho-43eaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186698242752:android:4d3d2324c1c5ad6d",
+        "android_client_info": {
+          "package_name": "iknox27.com.pushnotificationsexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186698242752-qc2i0q07drbc8iavi21r0v5n8a732apg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd5K_DWZo9yxBTQuhkB_3tl9pn_nvC8WI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
